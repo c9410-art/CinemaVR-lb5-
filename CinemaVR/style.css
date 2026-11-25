@@ -1,0 +1,499 @@
+:root {
+  font-family: 'Inter:Regular', Inter, Arial, sans-serif;
+  color: #C02020;
+  background: #fff;
+  font-synthesis: none;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  min-width: 320px;
+  background: #fff;
+}
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+button,
+input {
+  font: inherit;
+}
+button {
+  color: inherit;
+}
+[hidden] {
+  display: none !important;
+}
+.app-shell {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+#main {
+  display: flex;
+  flex: 1;
+}
+.screen {
+  display: none;
+}
+.screen.active {
+  display: block;
+}
+.site-header {
+  height: 100px;
+  flex: 0 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 max(6.45vw, 28px);
+  background: #C02020;
+  color: #fff;
+}
+.brand,
+.footer-brand,
+.login-link {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.brand {
+  color: #fff;
+  font-size: 32px;
+  line-height: 1;
+}
+.login-link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #fff;
+  font-size: 32px;
+  line-height: 1;
+}
+.login-link img {
+  width: 40px;
+  height: 40px;
+}
+.page-content {
+  width: min(1204px, calc(100% - 48px));
+  margin-inline: auto;
+  flex: 1;
+}
+.home-page {
+  min-height: 972px;
+  padding-top: 41px;
+}
+.home-page h1 {
+  margin: 0 0 38px;
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+.movie-banner {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 404px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 40px;
+  padding: 0;
+  background: #d9d9d9;
+  cursor: pointer;
+  text-align: left;
+}
+.movie-banner img,
+.detail-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 90%;
+}
+.movie-banner span {
+  position: absolute;
+  top: 13px;
+  left: 55px;
+  color: #fff;
+  font-size: 48px;
+  line-height: 1.2;
+}
+.site-footer {
+  height: 316px;
+  flex: 0 0 316px;
+  padding: 63px max(12vw, 48px);
+  background: #C02020;
+  color: #fff;
+}
+.footer-brand {
+  color: #fff;
+  font-size: 32px;
+  line-height: 1;
+}
+.details-page {
+  min-height: 1422px;
+  padding-top: 40px;
+}
+.movie-name {
+  position: static;
+  margin: 0 0 20px 0;
+  width: 100%;
+}
+.movie-name h1 {
+  color: #C02020;
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: bold;
+  margin: 0;
+}
+.detail-banner {
+  width: 100%;
+  height: 404px;
+  overflow: hidden;
+  border-radius: 40px;
+}
+.date-card {
+  width: 100px;
+  height: 100px;
+  margin: 36px 0 27px 23px;
+  border: 5px solid #C02020;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 24px;
+  line-height: 1.25;
+}
+.sessions {
+  margin-left: 23px;
+}
+.sessions h1,
+.description h2 {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.3;
+  font-weight: 400;
+}
+.sessions button {
+  min-width: 110px;
+  height: 64px;
+  margin-top: 13px;
+  padding: 0 10px;
+  border: 5px solid #C02020;
+  border-radius: 40px;
+  background: transparent;
+  color: #C02020;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+}
+.description {
+  margin: 27px 23px 80px;
+}
+.description p {
+  max-width: 1181px;
+  margin: 7px 0 0;
+  color: #000;
+  font-size: 40px;
+  line-height: 1.22;
+}
+.seats-page {
+  min-height: 1422px;
+  padding-top: 35px;
+}
+.movie-summary {
+  display: flex;
+  align-items: flex-start;
+  gap: 26px;
+  margin-left: 1px;
+}
+.movie-summary img {
+  width: 203px;
+  height: 300px;
+  border-radius: 40px;
+  object-fit: cover;
+}
+.movie-summary h1,
+.movie-summary p {
+  margin: 0;
+  font-size: 48px;
+  line-height: 1.25;
+  font-weight: 400;
+}
+.seat-selection {
+  margin-top: 25px;
+}
+.seat-selection h2,
+.selected-seats h2 {
+  margin: 0;
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+.seat-grid {
+  width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(16, 34px);
+  gap: 10px;
+  margin: 84px auto 0;
+}
+.seat {
+  width: 34px;
+  height: 48px;
+  border: 0;
+  border-radius: 10px;
+  background: #C02020;
+  opacity: 0.45;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    transform 160ms ease;
+}
+.seat:hover {
+  transform: translateY(-2px);
+}
+.seat.selected {
+  background: #C02020;
+}
+.selected-seats {
+  min-height: 377px;
+  margin-top: 75px;
+}
+.selected-seats p {
+  margin: 18px 0 0;
+  font-size: 28px;
+}
+.pay-button {
+  min-width: 413px;
+  min-height: 75px;
+  border: 0;
+  border-radius: 40px;
+  padding: 8px 38px;
+  background: #C02020;
+  color: #d9d9d9;
+  opacity: 0.45;
+  font-size: 40px;
+  line-height: 1.2;
+  cursor: pointer;
+}
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgb(0 0 0 / 25%);
+  animation: backdrop-in 300ms ease-in both;
+}
+.login-modal {
+  position: relative;
+  width: min(560px, 100%);
+  height: 524px;
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 2px;
+  padding: 47px 81px 60px;
+  background: #CF3131;
+  color: #fff;
+  animation: modal-in 300ms ease-in both;
+}
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+.login-modal h2 {
+  margin: 0 0 72px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 400;
+}
+.login-modal form {
+  display: grid;
+}
+.login-modal label {
+  margin: 0 12px 15px;
+  font-size: 20px;
+  line-height: 1.2;
+}
+.login-modal input {
+  width: 100%;
+  height: 50px;
+  border: 0;
+  border-radius: 40px;
+  padding: 0 25px;
+  outline: 0;
+  background: #d9d9d9;
+  color: #1e1e1e;
+  font-size: 20px;
+}
+.login-modal input::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+.login-modal input + label {
+  margin-top: 39px;
+}
+.login-modal input:focus {
+  box-shadow: 0 0 0 3px rgb(255 255 255 / 45%);
+}
+.login-button {
+  min-width: 398px;
+  min-height: 50px;
+  border: 0;
+  border-radius: 40px;
+  padding: 8px 38px;
+  background: #C02020;
+  color: d9d9d9;
+  position: absolute;
+  right: auto;
+  top: 409px;
+  opacity: 100%;
+  font-size: 20px;
+  line-height: 1.2;
+  cursor: pointer;
+}
+@keyframes backdrop-in {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+}
+@media (max-width: 760px) {
+  .site-header {
+    height: 72px;
+    flex-basis: 72px;
+    padding-inline: 24px;
+  }
+  .brand,
+  .footer-brand,
+  .login-link {
+    font-size: 20px;
+  }
+  .login-link {
+    gap: 10px;
+  }
+  .login-link img {
+    width: 28px;
+    height: 28px;
+  }
+  .page-content {
+    width: calc(100% - 40px);
+  }
+  .movie-name {
+    margin-bottom: 20px;
+  }
+  .movie-name h1 {
+    font-size: 32px;
+  }
+  .home-page,
+  .details-page,
+  .seats-page {
+    min-height: auto;
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+  .home-page h1,
+  .seat-selection h2,
+  .selected-seats h2 {
+    font-size: 32px;
+  }
+  .home-page h1 {
+    margin-bottom: 24px;
+  }
+  .movie-banner,
+  .detail-banner {
+    height: clamp(190px, 46vw, 300px);
+    border-radius: 24px;
+  }
+  .movie-banner span {
+    top: 14px;
+    left: 24px;
+    font-size: 32px;
+  }
+  .details-page {
+    padding-top: 42px;
+  }
+  .date-card,
+  .sessions,
+  .description {
+    margin-left: 0;
+  }
+  .sessions h1,
+  .description h2 {
+    font-size: 28px;
+  }
+  .description {
+    margin-right: 0;
+  }
+  .description p {
+    font-size: 22px;
+  }
+  .movie-summary img {
+    width: 114px;
+    height: 168px;
+    border-radius: 22px;
+  }
+  .movie-summary h1,
+  .movie-summary p {
+    font-size: 28px;
+  }
+  .seat-grid {
+    width: 100%;
+    grid-template-columns: repeat(16, minmax(15px, 24px));
+    justify-content: center;
+    gap: 8px;
+    margin-top: 48px;
+  }
+  .seat {
+    width: 100%;
+    height: 40px;
+  }
+  .selected-seats {
+    min-height: 220px;
+    margin-top: 52px;
+  }
+  .pay-button {
+    min-width: 0;
+    min-height: 56px;
+    width: 100%;
+    font-size: 26px;
+  }
+  .site-footer {
+    height: 190px;
+    flex-basis: 190px;
+    padding: 48px 24px;
+  }
+  .login-modal {
+    height: auto;
+    min-height: 440px;
+    padding: 42px 24px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

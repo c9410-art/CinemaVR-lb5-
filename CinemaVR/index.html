@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CinemaVR"/>
+    <link rel="stylesheet" href="style.css" />
+    <title>CinemaVR</title>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-header">
+        <button class="brand" type="button" data-screen-link="home">CinemaVR</button>
+        <button class="login-link" type="button" data-open-login><img src="/assets/c58de.svg" alt="" />
+          <span>Увійти</span>
+        </button>
+      </header>
+      <main id="main">
+        <section class="screen home-page page-content active" data-screen="home">
+          <h1>Сеанси сьогодні</h1>
+          <button class="movie-banner" type="button" data-screen-link="details">
+            <img src="/assets/12ab7.png" alt="Постер фільму Дюна" />
+            <span>Дюна</span>
+          </button>
+        </section>
+        <section class="screen details-page page-content" data-screen="details">
+          <div class="movie-name" alt="Назва фільму">
+            <h1>Дюна</h1>
+          </div>
+          <div class="detail-banner">
+            <img src="/assets/12ab7.png" alt="Постер фільму Дюна" />
+          </div>
+          <div class="date-card" aria-label="Понеділок, 31">
+            <span>Пн</span>
+            <span>31</span>
+          </div>
+          <section class="sessions">
+            <h1>Доступні сеанси</h1>
+            <button type="button" data-screen-link="seats">12:30</button>
+          </section>
+          <section class="description">
+            <h2>Опис</h2>
+            <p>Шляхетний Дім Атрідів править дощовою планетою Каладан. Проте юний
+              син герцога Лето, Пол, бачить сни про пустельну планету Арракіс та
+              її жителів — фременів. Невдовзі на Каладан прибуває посол
+              імператора з наказом негайно переселитися на Арракіс задля
+              встановлення там миру.</p>
+          </section>
+        </section>
+        <section class="screen seats-page page-content" data-screen="seats">
+          <section class="movie-summary">
+            <img src="/assets/44e7b.png" alt="Постер фільму Дюна" />
+            <div>
+              <h1>Дюна</h1>
+              <p>Пн 31.11 12:30</p>
+            </div>
+          </section>
+          <section class="seat-selection">
+            <h2>Оберіть місце</h2>
+            <div class="seat-grid" id="seat-grid" aria-label="Місця в кінозалі"></div>
+          </section>
+          <section class="selected-seats" aria-live="polite">
+            <h2>Обрані місця</h2>
+            <p id="selected-seats"></p>
+          </section>
+          <button class="pay-button" type="button">Оплатити квитки</button>
+        </section>
+      </main>
+      <footer class="site-footer">
+        <button class="footer-brand" type="button" data-screen-link="home">CinemaVR</button>
+      </footer>
+    </div>
+    <div class="modal-backdrop" id="login-modal" hidden>
+      <section class="login-modal" role="dialog" aria-modal="true" aria-labelledby="login-title">
+        <button class="modal-close" type="button" data-close-login aria-label="Закрити">&times;</button>
+        <h2 id="login-title">Увійти в кабінет</h2>
+        <form>
+          <label for="email">Введіть email</label>
+          <input id="email" type="email" placeholder="Введіть email" />
+          <label for="password">Введіть пароль</label>
+          <input id="password" type="password" placeholder="Введіть пароль"/>
+        </form>
+        <button class="login-button" type="button">Увійти</button>
+      </section>
+    </div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
